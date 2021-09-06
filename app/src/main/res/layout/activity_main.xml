@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/background_color"
     tools:context=".MainActivity">
 
 
@@ -14,7 +15,7 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="49dp"
         android:ems="10"
-        android:hint="enter name"
+        android:hint="@string/en_name"
         android:inputType="textPersonName"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -26,7 +27,7 @@
         android:layout_marginStart="34dp"
         android:layout_marginTop="34dp"
         android:ems="10"
-        android:hint="enter password"
+        android:hint="@string/en_pwd"
         android:inputType="textPassword"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etName" />

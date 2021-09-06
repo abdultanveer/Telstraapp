@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Telstraapp</string>
+    <string name="en_name">enter name</string>
+    <string name="en_pwd">enter password</string>
 </resources>
