@@ -1,6 +1,9 @@
 package com.abdul.telstraapp;
 
 public   class Student {
+
+    public static String COLLEGE_NAME = "IIT";
+
     static  int age = 30;
 
     public static void main(String[] args) {
