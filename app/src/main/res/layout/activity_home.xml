@@ -16,4 +16,28 @@
         android:text="TextView"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/etContact"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="25dp"
+        android:ems="10"
+        android:hint="name n phone of contact"
+        android:inputType="textPersonName"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btnSelect"
+        app:layout_constraintEnd_toStartOf="@+id/btnSelect"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnSelect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="109dp"
+        android:layout_marginEnd="12dp"
+        android:onClick="sendData"
+        android:text="select"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/etContact"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

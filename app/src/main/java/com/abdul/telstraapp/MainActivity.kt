@@ -50,6 +50,14 @@ class MainActivity : AppCompatActivity() {
         var homeIntent = Intent(this, HomeActivity::class.java)
         //   homeIntent.apply { putExtra("namekey",name) }
         homeIntent.putExtra("namekey", name)
-        startActivity(homeIntent)
+        startActivityForResult(homeIntent,123)
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, resultIntent: Intent?) {
+        super.onActivityResult(requestCode, resultCode, resultIntent)
+        if (requestCode == 123 && resultCode == RESULT_OK){
+            var tvResult: TextView = findViewById(R.id.tvResult)
+            tvResult.setText(resultIntent?.getStringExtra("contactkey"))
+        }
     }
 }
