@@ -20,7 +20,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun clickHandler(view: View) {
-        var name = nameEt.text
+        var name = nameEt.text.toString()
 
         var homeIntent = Intent(this,HomeActivity::class.java)
      //   homeIntent.apply { putExtra("namekey",name) }
