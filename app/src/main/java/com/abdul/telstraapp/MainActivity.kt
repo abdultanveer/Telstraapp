@@ -1,6 +1,7 @@
 package com.abdul.telstraapp
 
 import android.content.Intent
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -20,14 +21,35 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun clickHandler(view: View) {
+        when(view.id){
+            R.id.button -> startHomeActivity()
+            R.id.btnText -> setDataTextview()
+            R.id.btnDial -> startDialer()
+        }
+
+        //setDataTextview()
+       // startDialer()
+    }
+
+    private fun startDialer() {
+        var dialIntent = Intent(Intent.ACTION_DIAL, Uri.parse("tel:12345987654"))
+        startActivity(dialIntent)
+    }
+
+    private fun setDataTextview() {
         var name = nameEt.text.toString()
 
-        var homeIntent = Intent(this,HomeActivity::class.java)
-     //   homeIntent.apply { putExtra("namekey",name) }
-        homeIntent.putExtra("namekey",name)
-        startActivity(homeIntent)
-        /*var tvResult: TextView = findViewById(R.id.tvResult)
+        var tvResult: TextView = findViewById(R.id.tvResult)
         tvResult.setText(name)
-        Toast.makeText(this,"welcome to android",Toast.LENGTH_SHORT).show()*/
+        Toast.makeText(this, "welcome to android", Toast.LENGTH_SHORT).show()
+    }
+
+    private fun startHomeActivity() {
+        var name = nameEt.text.toString()
+
+        var homeIntent = Intent(this, HomeActivity::class.java)
+        //   homeIntent.apply { putExtra("namekey",name) }
+        homeIntent.putExtra("namekey", name)
+        startActivity(homeIntent)
     }
 }
