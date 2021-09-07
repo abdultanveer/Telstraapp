@@ -4,6 +4,7 @@ import android.content.Intent
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.EditText
 import android.widget.TextView
@@ -12,15 +13,49 @@ import android.widget.Toast
 class MainActivity : AppCompatActivity() {
     lateinit var person:Person
     lateinit var nameEt: EditText
+    var TAG = MainActivity::class.java.simpleName
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        Log.i(TAG,"oncreate")
         setContentView(R.layout.activity_main)
         person = Person("abdul",321)
         nameEt = findViewById(R.id.etName)
     }
 
+    override fun onStart() {
+        super.onStart()
+        Log.e(TAG,"onstart")
+
+    }
+
+    override fun onPause() {
+        super.onPause()
+        Log.v(TAG,"onpause")
+
+    }
+
+    override fun onResume() {
+        super.onResume()
+        Log.w(TAG,"onresume")
+
+    }
+
+    override fun onStop() {
+        super.onStop()
+        Log.d(TAG,"onstop")
+
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        Log.e(TAG,"ondestroy")
+
+    }
+
+
     fun clickHandler(view: View) {
+        //throw NullPointerException("clickhandler")
         when(view.id){
             R.id.button -> startHomeActivity()
             R.id.btnText -> setDataTextview()
