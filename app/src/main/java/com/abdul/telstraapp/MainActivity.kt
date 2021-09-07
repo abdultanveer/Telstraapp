@@ -1,5 +1,6 @@
 package com.abdul.telstraapp
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -20,8 +21,13 @@ class MainActivity : AppCompatActivity() {
 
     fun clickHandler(view: View) {
         var name = nameEt.text
-        var tvResult: TextView = findViewById(R.id.tvResult)
+
+        var homeIntent = Intent(this,HomeActivity::class.java)
+     //   homeIntent.apply { putExtra("namekey",name) }
+        homeIntent.putExtra("namekey",name)
+        startActivity(homeIntent)
+        /*var tvResult: TextView = findViewById(R.id.tvResult)
         tvResult.setText(name)
-        Toast.makeText(this,"welcome to android",Toast.LENGTH_SHORT).show()
+        Toast.makeText(this,"welcome to android",Toast.LENGTH_SHORT).show()*/
     }
 }
