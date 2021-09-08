@@ -56,6 +56,7 @@ class MainActivity : AppCompatActivity() {
 
     fun clickHandler(view: View) {
         //throw NullPointerException("clickhandler")
+        add(10,20)
         when(view.id){
             R.id.button -> startHomeActivity()
             R.id.btnText -> setDataTextview()
@@ -66,8 +67,12 @@ class MainActivity : AppCompatActivity() {
        // startDialer()
     }
 
+    fun add( a: Int, b:Int): Int {
+
+        return a+b
+    }
     private fun startDialer() {
-        var dialIntent = Intent(Intent.ACTION_DIAL, Uri.parse("tel:12345987654"))
+        var dialIntent = Intent(Intent.ACTION_DIAL, Uri.parse("tel:12345987654")) //implicit intent
         startActivity(dialIntent)
     }
 
@@ -82,7 +87,7 @@ class MainActivity : AppCompatActivity() {
     private fun startHomeActivity() {
         var name = nameEt.text.toString()
 
-        var homeIntent = Intent(this, HomeActivity::class.java)
+        var homeIntent = Intent(this, HomeActivity::class.java) //explicit intent
         //   homeIntent.apply { putExtra("namekey",name) }
         homeIntent.putExtra("namekey", name)
         startActivityForResult(homeIntent,123)
