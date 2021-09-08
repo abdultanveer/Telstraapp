@@ -2,4 +2,9 @@
     <string name="app_name">Telstraapp</string>
     <string name="en_name">enter name</string>
     <string name="en_pwd">enter password</string>
+    <string name="add_word">add word</string>
+
+    <string name="hint_word">Word...</string>
+    <string name="button_save">Save</string>
+    <string name="empty_not_saved">Word not saved because it is empty.</string>
 </resources>
