@@ -1,5 +1,7 @@
 package com.abdul.telstraapp;
 
+import com.abdul.telstraapp.javakotlin.Calculator;
+
 import junit.framework.TestCase;
 
 import org.junit.Test;

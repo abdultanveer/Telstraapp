@@ -9,9 +9,10 @@ import android.view.View
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
+import com.abdul.telstraapp.javakotlin.Person
 
 class MainActivity : AppCompatActivity() {
-    lateinit var person:Person
+    lateinit var person: Person
     lateinit var nameEt: EditText
     var TAG = MainActivity::class.java.simpleName
 

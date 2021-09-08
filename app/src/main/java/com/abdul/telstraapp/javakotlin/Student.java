@@ -1,4 +1,4 @@
-package com.abdul.telstraapp;
+package com.abdul.telstraapp.javakotlin;
 
 public   class Student {
 
