@@ -1,14 +1,10 @@
-package com.abdul.telstraapp
+package com.abdul.telstraapp.db
 
-import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.EditText
-import com.abdul.telstraapp.db.InsertTask
-import com.abdul.telstraapp.db.Word
-import com.abdul.telstraapp.db.WordDao
-import com.abdul.telstraapp.db.WordRoomDb
+import com.abdul.telstraapp.R
 
 class DatabaseActivity : AppCompatActivity() {
 

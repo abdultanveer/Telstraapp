@@ -10,8 +10,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Telstraapp">
         <activity
-            android:name=".DatabaseActivity"
-            android:exported="true" >
+            android:name=".db.DatabaseActivity"
+            android:exported="true">
+
+        </activity>
+        <activity android:name=".DataActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
