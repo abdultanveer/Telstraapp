@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.abdul.telstraapp">
 
+    <uses-permission android:name="android.permission.READ_SMS"/>
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -10,11 +12,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Telstraapp">
         <activity
-            android:name=".db.DatabaseActivity"
-            android:exported="true">
-
-        </activity>
-        <activity android:name=".DataActivity">
+            android:name=".ContentProviderActivity"
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -22,16 +21,20 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".RecyclerActivity"
-            android:exported="true">
+            android:name=".db.DatabaseActivity"
+            android:exported="true"></activity>
+        <activity android:name=".DataActivity">
 
         </activity>
+        <activity
+            android:name=".RecyclerActivity"
+            android:exported="true"></activity>
         <activity
             android:name=".HomeActivity"
             android:exported="true" />
         <activity
             android:name=".MainActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
     </application>
 
 </manifest>

@@ -3,6 +3,8 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Admin/AppData/Local/Android/Sdk/platforms/android-30/data/res/layout/simple_list_item_1.xml" value="0.15489130434782608" />
+        <entry key="..\:/flutterprojects/Telstraapp/app/src/main/res/layout/activity_content_provider.xml" value="0.159375" />
         <entry key="..\:/flutterprojects/Telstraapp/app/src/main/res/layout/activity_data.xml" value="0.25" />
         <entry key="..\:/flutterprojects/Telstraapp/app/src/main/res/layout/activity_database.xml" value="0.25885416666666666" />
         <entry key="..\:/flutterprojects/Telstraapp/app/src/main/res/layout/activity_db.xml" value="0.27291666666666664" />
