@@ -8,7 +8,7 @@ import java.util.List;
 
 public interface NoteDao {
     @Insert
-    void insert(Note note);
+    Void insert(Note note);
 
     @Query("SELECT * FROM Note WHERE title LIKE :note ")
     List<Note> findNote(Note note);
