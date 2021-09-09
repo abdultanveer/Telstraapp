@@ -23,7 +23,38 @@ class DataActivity : AppCompatActivity() {
         noteDao = noteDb.noteDao()
     }
 
+    override fun onPause() {
+        super.onPause()
+        saveData()
+    }
 
+    private fun saveData() {
+        //get the data from edittexts
+        var data = etTitle.text.toString()
+        //create file
+        var sharedPreferences = getSharedPreferences("telstrafile", MODE_PRIVATE)
+        //open the file
+        var editor = sharedPreferences.edit()
+        //write to the file
+        editor.putString("title",data)
+        //save the file contents
+        editor.apply()
+    }
+
+    override fun onResume() {
+        super.onResume()
+        restoreData()
+    }
+
+    private fun restoreData() {
+        //open the file
+        var sharedPreferences = getSharedPreferences("telstrafile", MODE_PRIVATE)
+        //read from the file
+        var data = sharedPreferences.getString("title"," ")
+        //set the data in the edittexts
+        etTitle.setText(data)
+
+    }
 
 
     fun handleDb(view: View) {
