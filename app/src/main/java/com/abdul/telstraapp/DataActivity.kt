@@ -5,10 +5,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.EditText
 import android.widget.TextView
-import com.abdul.telstraapp.dbdemo.InsertNoteAsyncTask
-import com.abdul.telstraapp.dbdemo.Note
-import com.abdul.telstraapp.dbdemo.NoteDao
-import com.abdul.telstraapp.dbdemo.NoteDb
+import com.abdul.telstraapp.dbdemo.*
 
 class DataActivity : AppCompatActivity() {
     lateinit var etTitle: EditText
@@ -39,5 +36,12 @@ class DataActivity : AppCompatActivity() {
     private fun insertNoteAsync(note: Note) {
         var insertTask = InsertNoteAsyncTask(note,noteDao)
         insertTask.execute()
+    }
+
+    fun findDb(view: View) {
+        var title = etTitle.text.toString()
+        var getNoteAsyncTask = GetNoteAsyncTask(title,noteDao,tvRes)
+        getNoteAsyncTask.execute()
+
     }
 }
