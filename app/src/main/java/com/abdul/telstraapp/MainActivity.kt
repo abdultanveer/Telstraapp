@@ -82,7 +82,7 @@ class MainActivity : AppCompatActivity() {
 
         var tvResult: TextView = findViewById(R.id.tvResult)
         tvResult.setText(name)
-        Toast.makeText(this, "welcome to android", Toast.LENGTH_SHORT).show()
+       // Toast.makeText(this, "welcome to android", Toast.LENGTH_SHORT).show()
     }
 
     private fun startHomeActivity() {
