@@ -23,14 +23,14 @@ import kotlin.jvm.JvmField;
 
 @LargeTest
 @RunWith(AndroidJUnit4.class)
-public class MyMainActivityTest extends TestCase {
+public class MyMainActivityTest {
 
     @Rule
     @JvmField
-    ActivityTestRule mActivityTestRule = new ActivityTestRule(MainActivity.class);
+    public ActivityTestRule<MainActivity> mActivityTestRule = new ActivityTestRule<>(MainActivity.class);
 
     @Test
-    void mainActivityTest() {
+   public void mainActivityTest() {
         // 1. Find a View
         // 2. Perform an action
         // 3. Verify action was taken, assert result
