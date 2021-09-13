@@ -60,7 +60,7 @@ class MainActivityTest {
 
         val textView = onView(
             allOf(
-                withId(R.id.tvResult), withText("telstra"),
+                withId(R.id.tvResult), withText("abdul"),
                 withParent(withParent(withId(android.R.id.content))),
                 isDisplayed()
             )
